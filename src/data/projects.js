@@ -1,0 +1,42 @@
+export const projects = [
+  {
+    id: 1,
+    title: 'Tech Agency Landing Page',
+    category: 'WordPress',
+    image: 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&h=400&fit=crop',
+    description: 'A modern, high-converting landing page for a tech agency built with WordPress and Elementor.',
+    tags: ['WordPress', 'Elementor', 'SEO'],
+  },
+  {
+    id: 2,
+    title: 'E-commerce Store Redesign',
+    category: 'E-commerce',
+    image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop',
+    description: 'Complete WooCommerce redesign improving UX and boosting conversion rate by 40%.',
+    tags: ['WooCommerce', 'UI/UX', 'WordPress'],
+  },
+  {
+    id: 3,
+    title: 'Creative Portfolio Site',
+    category: 'Portfolio',
+    image: 'https://images.unsplash.com/photo-1545235617-9465d2a55698?w=600&h=400&fit=crop',
+    description: 'Elegant portfolio website for a creative professional with smooth animations.',
+    tags: ['Portfolio', 'Figma', 'WordPress'],
+  },
+  {
+    id: 4,
+    title: 'SaaS Product Website',
+    category: 'Business',
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop',
+    description: 'Professional SaaS marketing site with clear value proposition and CTA strategy.',
+    tags: ['Business', 'WordPress', 'SEO'],
+  },
+  {
+    id: 5,
+    title: 'Service-Based Business Site',
+    category: 'Business',
+    image: 'https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?w=600&h=400&fit=crop',
+    description: 'Local service business website designed for lead generation and local SEO.',
+    tags: ['Business', 'Local SEO', 'WordPress'],
+  },
+];

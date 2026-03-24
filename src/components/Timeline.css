@@ -1,0 +1,133 @@
+.timeline-section {
+  background: var(--navy);
+}
+
+.timeline {
+  position: relative;
+  margin-top: 4rem;
+  padding-bottom: 2rem;
+}
+
+/* Center vertical line */
+.timeline-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  transform: translateX(-50%);
+  background: linear-gradient(to bottom, transparent, var(--gold) 10%, var(--gold) 90%, transparent);
+  opacity: 0.4;
+}
+
+/* Each item */
+.timeline-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 3rem;
+  position: relative;
+  width: 100%;
+}
+
+/* Dot on the line */
+.timeline-dot {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--navy);
+  border: 2px solid var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold);
+  font-size: 0.9rem;
+  z-index: 2;
+  flex-shrink: 0;
+}
+
+/* Card positioning */
+.timeline-item.left .timeline-card {
+  margin-right: calc(50% + 50px);
+  text-align: right;
+}
+
+.timeline-item.right .timeline-card {
+  margin-left: calc(50% + 50px);
+  text-align: left;
+}
+
+/* Card */
+.timeline-card {
+  flex: 1;
+  background: var(--charcoal);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: var(--radius);
+  padding: 1.75rem 2rem;
+  transition: all 0.3s ease;
+}
+
+.timeline-card:hover {
+  border-color: rgba(212, 175, 55, 0.4);
+  box-shadow: 0 8px 30px rgba(212, 175, 55, 0.1);
+}
+
+.timeline-card-icon {
+  color: var(--gold);
+  font-size: 1.4rem;
+  margin-bottom: 0.6rem;
+}
+
+.timeline-item.left .timeline-card-icon {
+  text-align: right;
+}
+
+.timeline-year {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+  font-family: var(--font-body);
+}
+
+.timeline-title {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  color: var(--white);
+  margin-bottom: 0.6rem;
+}
+
+.timeline-desc {
+  color: var(--gray-mid);
+  font-size: 0.88rem;
+  line-height: 1.7;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .timeline-line {
+    left: 20px;
+  }
+
+  .timeline-dot {
+    left: 20px;
+    width: 36px;
+    height: 36px;
+    font-size: 0.8rem;
+  }
+
+  .timeline-item.left .timeline-card,
+  .timeline-item.right .timeline-card {
+    margin-left: 60px;
+    margin-right: 0;
+    text-align: left;
+  }
+
+  .timeline-item.left .timeline-card-icon {
+    text-align: left;
+  }
+}
