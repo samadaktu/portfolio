@@ -43,7 +43,7 @@ export const services = [
   },
   {
     id: 8,
-    icon: 'FaSearchengin',
+    icon: 'FaSearch',
     title: 'SEO-friendly Structure',
     description: 'Websites built from the ground up with SEO best practices to rank higher and attract traffic.',
   },

@@ -16,7 +16,7 @@ const iconMap = {
   FaBullseye: <FaBullseye />,
   FaPencilRuler: <FiPenTool />,
   FaSync: <FaSync />,
-  FaSearchengin: <FaSearch />,
+  FaSearch: <FaSearch />,
 };
 
 const cardVariants = {
