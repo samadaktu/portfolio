@@ -1,0 +1,185 @@
+.careers-page {
+  padding-top: 80px;
+}
+
+.careers-hero {
+  position: relative;
+  padding: 120px 20px 80px;
+  background: linear-gradient(135deg, var(--primary-dark-green) 0%, var(--primary-green) 100%);
+  background-image:
+    linear-gradient(135deg, rgba(26, 77, 46, 0.9) 0%, rgba(45, 122, 78, 0.9) 100%),
+    url('https://images.unsplash.com/photo-1558904541-efa843a96f01?w=1920&q=80');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+
+.careers-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.careers-hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.careers-hero h1 {
+  color: var(--white);
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  margin-bottom: 20px;
+}
+
+.careers-hero p {
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+.careers-intro {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.careers-intro h2 {
+  color: var(--primary-dark-green);
+  margin-bottom: 25px;
+}
+
+.careers-intro p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.benefit-card-career {
+  background: var(--white);
+  padding: 35px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition);
+}
+
+.benefit-card-career:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-xl);
+}
+
+.benefit-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.benefit-card-career h3 {
+  font-size: 1.25rem;
+  margin-bottom: 15px;
+  color: var(--primary-dark-green);
+}
+
+.benefit-card-career p {
+  margin: 0;
+  line-height: 1.7;
+}
+
+.roles-list {
+  max-width: 700px;
+  margin: 0 auto;
+  display: grid;
+  gap: 15px;
+}
+
+.role-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 20px 25px;
+  background: var(--off-white);
+  border-radius: 8px;
+  border-left: 4px solid var(--primary-green);
+  transition: var(--transition);
+}
+
+.role-item:hover {
+  background: var(--white);
+  box-shadow: var(--shadow-md);
+  transform: translateX(5px);
+}
+
+.role-item svg {
+  flex-shrink: 0;
+}
+
+.role-item span {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--dark-gray);
+}
+
+.company-culture {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.company-culture h2 {
+  text-align: center;
+  color: var(--primary-dark-green);
+  margin-bottom: 50px;
+}
+
+.culture-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.culture-item {
+  background: var(--white);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm);
+}
+
+.culture-item h3 {
+  font-size: 1.25rem;
+  margin-bottom: 15px;
+  color: var(--primary-dark-green);
+}
+
+.culture-item p {
+  margin: 0;
+  line-height: 1.7;
+}
+
+.careers-cta {
+  padding: 80px 20px;
+}
+
+.career-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+@media (max-width: 768px) {
+  .careers-hero {
+    padding: 100px 20px 60px;
+  }
+
+  .benefits-grid,
+  .culture-grid {
+    grid-template-columns: 1fr;
+  }
+}

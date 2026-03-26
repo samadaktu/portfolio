@@ -1,7 +1,7 @@
 {
-  "name": "abdul-samad-portfolio",
+  "name": "dlco-website",
   "version": "1.0.0",
-  "description": "Modern premium portfolio website for Abdul Samad, Founder of Techno Alig",
+  "description": "Professional website for Donnybrook Landscape Co - Award-winning landscaping and grounds maintenance in Dublin",
   "private": true,
   "dependencies": {
     "react": "^18.2.0",

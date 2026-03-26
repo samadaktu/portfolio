@@ -1,0 +1,48 @@
+.reasons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.reason-card {
+  background: var(--white);
+  padding: 40px 30px;
+  border-radius: 12px;
+  text-align: center;
+  transition: var(--transition);
+  box-shadow: var(--shadow-sm);
+}
+
+.reason-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.reason-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  filter: grayscale(0.3);
+}
+
+.reason-card:hover .reason-icon {
+  filter: grayscale(0);
+  transform: scale(1.1);
+  transition: var(--transition);
+}
+
+.reason-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 15px;
+  color: var(--primary-dark-green);
+}
+
+.reason-card p {
+  margin: 0;
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .reasons-grid {
+    grid-template-columns: 1fr;
+  }
+}

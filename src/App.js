@@ -1,38 +1,52 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import About from './components/About';
-import Services from './components/Services';
-import Skills from './components/Skills';
-import Portfolio from './components/Portfolio';
-import Timeline from './components/Timeline';
-import Testimonials from './components/Testimonials';
-import Contact from './components/Contact';
+
+// Components
+import Header from './components/Header';
 import Footer from './components/Footer';
+import FloatingCTA from './components/FloatingCTA';
+import ScrollToTop from './components/ScrollToTop';
+
+// Pages
+import Home from './pages/Home';
+import About from './pages/About';
+import GroundsMaintenance from './pages/services/GroundsMaintenance';
+import LandscapingServices from './pages/services/LandscapingServices';
+import GardenMaintenance from './pages/services/GardenMaintenance';
+import CommercialLandscaping from './pages/services/CommercialLandscaping';
+import Projects from './pages/Projects';
+import Careers from './pages/Careers';
+import Contact from './pages/Contact';
 
 function App() {
-  const [isDark, setIsDark] = useState(true);
-
   useEffect(() => {
-    document.body.style.background = isDark ? '#0f172a' : '#f8fafc';
-  }, [isDark]);
+    // Set page title
+    document.title = "Donnybrook Landscape Co | Award-Winning Landscaping Dublin";
+  }, []);
 
   return (
-    <div className="app">
-      <Navbar isDark={isDark} setIsDark={setIsDark} />
-      <main>
-        <Hero />
-        <About />
-        <Services />
-        <Skills />
-        <Portfolio />
-        <Timeline />
-        <Testimonials />
-        <Contact />
-      </main>
-      <Footer />
-    </div>
+    <Router>
+      <ScrollToTop />
+      <div className="app">
+        <Header />
+        <main>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/services/grounds-maintenance" element={<GroundsMaintenance />} />
+            <Route path="/services/landscaping" element={<LandscapingServices />} />
+            <Route path="/services/garden-maintenance" element={<GardenMaintenance />} />
+            <Route path="/services/commercial" element={<CommercialLandscaping />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/careers" element={<Careers />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </main>
+        <Footer />
+        <FloatingCTA />
+      </div>
+    </Router>
   );
 }
 
