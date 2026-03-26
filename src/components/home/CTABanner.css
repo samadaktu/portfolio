@@ -1,0 +1,76 @@
+.cta-banner {
+  position: relative;
+  padding: 100px 20px;
+  background: linear-gradient(135deg, var(--primary-dark-green) 0%, var(--primary-green) 100%);
+  background-image:
+    linear-gradient(135deg, rgba(26, 77, 46, 0.95) 0%, rgba(45, 122, 78, 0.95) 100%),
+    url('https://images.unsplash.com/photo-1527525443983-6e60c75fff46?w=1920&q=80');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+
+.cta-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at center, transparent 0%, rgba(0, 0, 0, 0.2) 100%);
+}
+
+.cta-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cta-content h2 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  color: var(--white);
+  margin-bottom: 20px;
+}
+
+.cta-content p {
+  font-size: clamp(1.1rem, 2vw, 1.3rem);
+  color: rgba(255, 255, 255, 0.95);
+  margin-bottom: 40px;
+  line-height: 1.7;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cta-buttons .btn-secondary {
+  background: transparent;
+  color: var(--white);
+  border-color: var(--white);
+}
+
+.cta-buttons .btn-secondary:hover {
+  background: var(--white);
+  color: var(--primary-green);
+}
+
+@media (max-width: 768px) {
+  .cta-banner {
+    padding: 60px 20px;
+    background-attachment: scroll;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .cta-buttons .btn {
+    width: 100%;
+  }
+}
